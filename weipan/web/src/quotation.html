@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-title" content="大圆信息技术有限公司" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta content="yes" name="apple-touch-fullscreen" />
+	<meta content="telephone=no,email=no" name="format-detection" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<meta name="keywords" content="大圆信息技术有限公司" />
+	<meta name="description" content="大圆信息技术有限公司"/>
+	<title>微盘</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!--- add js --->
+	<script type="text/javascript" src="js/flexible_css.debug.js"></script>
+	<script type="text/javascript" src="js/flexible.debug.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/quotation.css" />
+	<!--- add js --->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<div style='display:none;'>
+	<img src='resources/images/share-logo.jpg' />
+</div>
+	<div class="header">
+		<a href="user-account.html" class="icon-base icon-user"></a>
+		<a href="javascript:void(0);" class="header-choose"><div class="icon-choose"></div><div class="choose-text add">添加自选</div><div class="choose-text del">删除自选</div></a>
+		<div class="tea-box">
+			<p class="tea-title">老同志勐宋2016</p>
+			<p class="tea-number">604002</p>
+		</div>
+	</div>
+	<div class="offer-section">
+		<div class="offer-wrap clearfix">
+			<div class="float-left offer-item">
+				<p class="price"><span>32.78</span></p>
+				<p class="percent"><span>+1.25</span><span>+20.15%</span></p>
+			</div>
+			<div class="diviling float-left"></div>
+			<div class="float-left offer-item">
+				<p class="deal-data">成交量：41.25万份</p>
+				<p class="deal-data">成交额：1785.24万</p>
+			</div>
+		</div>		
+	</div>
+	<div class="section quotation-section">
+		<div class="quotation-offer">
+			<ul class="clearfix">
+				<li><span class="title">开盘</span><span>8.21</span></li>
+				<li><span class="title">收盘</span><span>45.15</span></li>
+				<li><span class="title">最高</span><span class="red">54.12</span></li>
+				<li><span class="title">最低</span><span class="green">10.12</span></li>
+			</ul>									
+		</div>
+	</div>
+	<div class="quotation-tab clearfix">
+		<a href="javascript:void(0);" class="tab-item active">分时线</a>
+		<a href="javascript:void(0);" class="tab-item">日K</a>
+		<a href="javascript:void(0);" class="tab-item">周K</a>
+		<a href="javascript:void(0);" class="tab-item">月K</a>
+	</div>
+	<div id="chart" class="chart">
+		<img src="resources/images/chart.jpg" />
+	</div>
+	<div class="tip-dialog"></div>
+	<script>
+
+		//添加和删除自选商品
+		$('.header-choose').on('click',function(){
+			$(this).toggleClass('remove-choose');
+		});
+		
+		//行情表tab
+		$('.quotation-tab .tab-item').on('click',function(){
+			$('.quotation-tab .tab-item').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+</body>
+</html>

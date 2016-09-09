@@ -1,0 +1,151 @@
+body {
+    background: #fff;
+}
+
+.warning-section {
+    padding-top: 1.22rem;
+}
+
+.warning-goods {
+    padding-bottom: 0.3125rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.warning-section .title {
+    padding: 0.46875rem;
+    font-size: 16px;
+}
+
+.warning-section .title input[type="text"] {
+    width: 2.8125rem;
+    margin: 0 0.3125rem;
+    padding: 0.25rem 0;
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 0.15625rem;
+}
+
+.warning-section .quotation span {
+    display: inline-block;
+    width: 2.90625rem;
+    margin-left: 0.3125rem;
+    padding: 0.3125rem 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.15625rem;
+    background: #999999;
+}
+.warning-section .edit-wrap .title{
+    border-bottom:1px solid #ccc;
+}
+.warning-section .edit-wrap .title input[type="text"]{
+    float: left;
+    width: 3.875rem;
+    color: #333;
+}
+
+.warning-section .edit-wrap .title label{
+    float: left;
+    width: 2.34375rem;
+    padding-top:0.365rem;
+}
+.warning-section .edit-wrap .title span{
+    float: left;
+    padding-top:0.3875rem;
+}
+
+.bottom-section{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    padding-bottom:0.46875rem;
+    z-index:100;
+    background: #fff;
+}
+.bottom-section .btn{
+    width:7.8125rem;
+    padding:0.25rem 0;
+    margin: 0 auto;
+    font-size:18px;
+}
+
+.check-switch {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    float: right;
+    cursor: pointer;
+    width: 1.5625rem;
+    height: 0.9375rem;
+    position: relative;
+    margin-top:0.0625rem;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 0.588rem;
+    background-clip: content-box;
+}
+
+/* 中间圆圈样式*/
+.check-switch:before {
+    content: '';
+    width: 0.825rem;
+    height: 0.825rem;
+    position: absolute;
+    top: 0.02rem;
+    left: 0;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/*checkbox元素被选中时的样式*/
+.check-switch:checked {
+    border-color: #bd4745;
+    box-shadow: #bd4745 0 0 0 16px inset;
+    background-color: #64bd63;
+}
+
+/* 在checkbox选中后，中间圆圈的便宜位置*/
+.check-switch:checked:before {
+    left: 0.675rem;
+}
+
+/* 增加动画效果*/
+.check-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.2s;
+}
+
+.check-switch-anim:before {
+    transition: left 0.2s;
+}
+
+.check-switch-anim:checked {
+    box-shadow: #bd4745 0 0 0 16px inset;
+    background-color: #bd4745;
+    transition: border ease 0.2s, box-shadow ease 0.2s, background-color ease 0.4s;
+}
+
+.check-switch-anim:checked:before {
+    transition: left 0.2s;
+}
+
+[data-dpr="2"] .warning-section .title{
+    font-size: 28px;
+}
+[data-dpr="2"] .warning-section .title input[type="text"],
+[data-dpr="2"] .bottom-section .btn{
+    font-size: 32px;
+}
+
+[data-dpr="3"] .warning-section .title{
+    font-size: 52px;
+}
+[data-dpr="3"] .warning-section .title input[type="text"],
+[data-dpr="3"] .bottom-section .btn{
+    font-size: 58px;
+}

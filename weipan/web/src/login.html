@@ -1,0 +1,76 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-title" content="大圆信息技术有限公司" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta content="yes" name="apple-touch-fullscreen" />
+	<meta content="telephone=no,email=no" name="format-detection" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<meta name="keywords" content="大圆信息技术有限公司" />
+	<meta name="description" content="大圆信息技术有限公司"/>
+	<title>微盘</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!--- add js --->
+	<script type="text/javascript" src="js/flexible_css.debug.js"></script>
+	<script type="text/javascript" src="js/flexible.debug.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/login.css" />
+	<!--- add js --->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div style='display:none;'>
+		<img src='resources/images/share-logo.jpg' />
+	</div>
+	<div class="header">
+		普洱
+	</div>
+
+	<form class="login-wrap">
+		<div class="form-item account border-none">
+			<input type="text" placeholder="请输入您的登录账号" />
+		</div>
+		<div class="form-item password">
+			<input type="password" placeholder="请输入您的登录密码" />
+		</div>
+		<div class="form-remeber">
+			<label>记住账号</label>
+		</div>
+		<div class="form-btn">
+			<a href="index.html" class="btn">登录</a>
+		</div>
+		<div class="form-btn">
+			<a href="index.html" class="btn border">在线开户</a>
+		</div>
+		<p class="form-tip">
+			忘记密码请联系客服重置
+		</p>
+		<p class="form-tel">
+			<a href="tel:4009282200">400-928-2200</a>
+		</p>
+	</form>
+	<div class="copyright">
+		<p>大泰信息技术有限公司 版权所有</p>
+		<p>Copyright @2014-2016</p>
+		<p>All Rights Reserved</p>
+	</div>
+
+	<!--提示-->
+	<div class="tip-dialog"></div>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(
+			function(){
+				$('.form-remeber label').on('click',function(){
+					$(this).toggleClass('checked');
+				});
+			}
+		);
+	</script>
+</body>
+</html>

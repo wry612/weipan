@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-title" content="大圆信息技术有限公司" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta content="yes" name="apple-touch-fullscreen" />
+	<meta content="telephone=no,email=no" name="format-detection" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<meta name="keywords" content="大圆信息技术有限公司" />
+	<meta name="description" content="大圆信息技术有限公司"/>
+	<title>微盘</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!--- add js --->
+	<script type="text/javascript" src="js/flexible_css.debug.js"></script>
+	<script type="text/javascript" src="js/flexible.debug.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/edit-warning.css" />
+	<!--- add js --->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<div style='display:none;'>
+	<img src='resources/images/share-logo.jpg' />
+</div>
+<div class="header clearfix">
+	编辑预警
+	<a href="user-account.html" class="icon-base icon-user"></a>
+</div>
+
+<!--编辑预警-->
+<div class="warning-section">
+	<div class="warning-goods">
+		<div class="title">
+			<label>预警商品</label><input type="text" value="610004" readonly="readonly" class="search-id" /><span>岁月知味娜罕2016</span>
+		</div>
+		<div class="quotation">
+			<span>现价0.00</span><span>涨跌0.00</span><span>涨跌幅0.00%</span>
+		</div>
+	</div>
+	<div class="edit-wrap">
+		<div class="title clearfix">
+			<input type="checkbox" checked="checked" class="check-switch check-switch-anim"/><label>价格高于</label><input type="text" placeholder="0.00" value="34.6" class="search-id" /><span>元</span>
+		</div>
+		<div class="title clearfix">
+			<input type="checkbox" class="check-switch check-switch-anim"/><label>价格低于</label><input type="text" placeholder="0.00" readonly="readonly" class="search-id" /><span>元</span>
+		</div>
+		<div class="title clearfix">
+			<input type="checkbox" class="check-switch check-switch-anim"/><label>日涨幅高于</label><input type="text" placeholder="0.00" readonly="readonly" class="search-id" /><span>%</span>
+		</div>
+		<div class="title clearfix">
+			<input type="checkbox" class="check-switch check-switch-anim"/><label>日跌幅高于</label><input type="text" placeholder="0.00" readonly="readonly" class="search-id" /><span>%</span>
+		</div>
+	</div>
+</div>
+<div class="bottom-section">
+	<a href="index.html" class="btn">保存</a>
+</div>
+<!--提示-->
+<div class="tip-dialog"></div>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(".delete").on("click",function(){
+		var _this  = this;
+		$(_this).parents('.transaction-list').remove();
+	});
+	$(".check-switch").on("click",function(){
+		var _this  = this;
+		if($(_this)[0].checked){
+			$(_this).parent().find('.search-id')[0].removeAttribute('readonly')
+		}else{
+			$(_this).parent().find('.search-id')[0].setAttribute('readonly','readonly');
+		}
+
+	});
+</script>
+</body>
+</html>

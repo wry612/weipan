@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-title" content="大圆信息技术有限公司" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta content="yes" name="apple-touch-fullscreen" />
+	<meta content="telephone=no,email=no" name="format-detection" />
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<meta name="keywords" content="大圆信息技术有限公司" />
+	<meta name="description" content="大圆信息技术有限公司"/>
+	<title>微盘</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!--- add js --->
+	<script type="text/javascript" src="js/flexible_css.debug.js"></script>
+	<script type="text/javascript" src="js/flexible.debug.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/global.css" />
+	<!--- add js --->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<div style='display:none;'>
+	<img src='resources/images/share-logo.jpg' />
+</div>
+<div class="header clearfix">
+	普洱预警
+	<a href="user-account.html" class="icon-base icon-user"></a>
+</div>
+<!--预警-->
+<div class="optional-section operation-section">
+	<!--预警列表-->
+	<div class="list-header clearfix">
+		<ul>
+			<li class="header-first">行情预警</li>
+		</ul>
+	</div>
+	<div class="transaction-section">
+		<ul class="transaction-list border-none clearfix">
+			<li class="item-first">
+				<p class="transaction-title">
+					<span>六大茶山曼囡2015</span><span> 603002</span>
+				</p>
+				<p class="warning-text clearfix">
+					<span>价格低于20.00</span><span>价格高于40.00</span>
+					<span>日涨幅高于10%</span><span>日跌幅高于10%</span>
+				</p>
+			</li>
+			<li class="float-right operation">
+				<a href="edit-warning.html" class="btn border">修改</a>
+				<a href="javascript:void(0);" class="btn border delete">删除</a>
+			</li>
+		</ul>
+		<ul class="transaction-list clearfix">
+			<li class="item-first">
+				<p class="transaction-title">
+					<span>六大茶山曼囡2016</span><span> 603002</span>
+				</p>
+				<p class="warning-text clearfix">
+					<span>价格低于20.00</span><span>价格高于40.00</span>
+					<span>日涨幅高于10%</span><span>日跌幅高于10%</span>
+				</p>
+			</li>
+			<li class="float-right operation">
+				<a href="edit-warning.html" class="btn border">修改</a>
+				<a href="javascript:void(0);" class="btn border delete">删除</a>
+			</li>
+		</ul>
+		<ul class="transaction-list clearfix">
+			<li class="item-first">
+				<p class="transaction-title">
+					<span>六大茶山曼囡2016</span><span> 603004</span>
+				</p>
+				<p class="warning-text clearfix">
+					<span>价格低于20.00</span><span>价格高于40.00</span>
+					<span>日涨幅高于10%</span><span>日跌幅高于10%</span>
+				</p>
+			</li>
+			<li class="float-right operation">
+				<a href="edit-warning.html" class="btn border">修改</a>
+				<a href="javascript:void(0);" class="btn border delete">删除</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--提示-->
+<div class="tip-dialog"></div>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(".operation-section").on("click",'.delete',function(){
+		var _this  = this;
+		$(_this).parents('.transaction-list').remove();
+	});
+</script>
+</body>
+</html>
